@@ -1,0 +1,91 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+
+# === Maven / Gradle ===
+target/
+out/
+!.mvn/wrapper/maven-wrapper.jar
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.iws
+*.ipr
+*.class
+
+# === Logs ===
+*.log
+logs/
+*.out
+
+# === Sistema operativo ===
+.DS_Store
+Thumbs.db
+
+# === Archivos temporales ===
+*.tmp
+*.bak
+*.swp
+
+# === Configuraciones específicas ===
+.env
+*.sqlite
+*.db
+
+# === Lombok annotations cache (opcional) ===
+lombok.config
+
+# === Test results ===
+test-output/
+
+# === Swagger generated files (si se generan en disco) ===
+swagger-ui/
+api-docs/
+
+# === Build tools ===
+.gradle/
+build/
+node_modules/
+
+# === IDEs y herramientas comunes ===
+.vscode/
+*.idea/
+*.classpath
+*.project
+*.settings/
+
+# === Docker (si usas contenedores en desarrollo) ===
+*.pid
+docker-compose.override.yml
