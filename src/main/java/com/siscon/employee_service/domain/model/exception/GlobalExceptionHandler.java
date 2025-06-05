@@ -1,4 +1,4 @@
-package com.siscon.employee_service.shared.exception;
+package com.siscon.employee_service.domain.model.exception;
 
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
@@ -54,7 +54,7 @@ public class GlobalExceptionHandler {
         String message;
 
         if (cause instanceof DateTimeParseException || ex.getMessage().contains("java.time.LocalDate")) {
-            message = "birthDate debe tener el formato 'yyyy-MM-dd'";
+            message = "birthDate debe tener el formato 'dd-MM-yyyy'";
         } else {
             message = "El formato del cuerpo de la solicitud es inválido.";
         }

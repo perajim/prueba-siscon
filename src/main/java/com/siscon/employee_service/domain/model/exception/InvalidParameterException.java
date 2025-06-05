@@ -1,4 +1,4 @@
-package com.siscon.employee_service.shared.exception;
+package com.siscon.employee_service.domain.model.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

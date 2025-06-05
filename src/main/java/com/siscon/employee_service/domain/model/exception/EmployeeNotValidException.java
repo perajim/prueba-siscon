@@ -1,4 +1,4 @@
-package com.siscon.employee_service.shared.exception;
+package com.siscon.employee_service.domain.model.exception;
 
 import java.util.List;
 

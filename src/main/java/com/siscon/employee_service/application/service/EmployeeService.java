@@ -2,21 +2,17 @@ package com.siscon.employee_service.application.service;
 
 import com.siscon.employee_service.domain.model.Employee;
 import com.siscon.employee_service.infrastructure.adapter.EmployeeRepositoryAdapter;
-import com.siscon.employee_service.shared.dto.DeleteEmployeeResponse;
-import com.siscon.employee_service.shared.dto.EmployeeRequest;
-import com.siscon.employee_service.shared.dto.EmployeeResponse;
-import com.siscon.employee_service.shared.dto.EmployeeUpdateRequest;
-import com.siscon.employee_service.shared.exception.EmployeeNotFoundException;
-import com.siscon.employee_service.shared.util.Mapper;
-import org.springframework.data.crossstore.ChangeSetPersister;
+import com.siscon.employee_service.delivery.api.dto.DeleteEmployeeResponse;
+import com.siscon.employee_service.delivery.api.dto.EmployeeRequest;
+import com.siscon.employee_service.delivery.api.dto.EmployeeResponse;
+import com.siscon.employee_service.delivery.api.dto.EmployeeUpdateRequest;
+import com.siscon.employee_service.domain.model.exception.EmployeeNotFoundException;
+import com.siscon.employee_service.infrastructure.mappers.Mapper;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class EmployeeService {

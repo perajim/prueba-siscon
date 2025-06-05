@@ -1,4 +1,4 @@
-package com.siscon.employee_service.infrastructure.repository;
+package com.siscon.employee_service.infrastructure.adapter;
 
 import com.siscon.employee_service.domain.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;

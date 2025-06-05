@@ -1,4 +1,4 @@
-package com.siscon.employee_service.shared.dto;
+package com.siscon.employee_service.delivery.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.Min;

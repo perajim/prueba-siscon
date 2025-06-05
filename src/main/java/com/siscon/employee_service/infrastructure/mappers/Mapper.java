@@ -1,8 +1,8 @@
-package com.siscon.employee_service.shared.util;
+package com.siscon.employee_service.infrastructure.mappers;
 
 import com.siscon.employee_service.domain.model.Employee;
-import com.siscon.employee_service.shared.dto.EmployeeRequest;
-import com.siscon.employee_service.shared.dto.EmployeeResponse;
+import com.siscon.employee_service.delivery.api.dto.EmployeeRequest;
+import com.siscon.employee_service.delivery.api.dto.EmployeeResponse;
 
 import java.util.Objects;
 import java.util.stream.Collectors;

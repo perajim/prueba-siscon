@@ -1,7 +1,6 @@
 package com.siscon.employee_service.infrastructure.adapter;
 
 import com.siscon.employee_service.domain.model.Employee;
-import com.siscon.employee_service.infrastructure.repository.EmployeeJpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -34,4 +33,5 @@ public class EmployeeRepositoryAdapter {
     public Employee save(Employee emp) {
         return repository.save(emp);
     }
+
 }

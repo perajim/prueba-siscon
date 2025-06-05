@@ -1,33 +1,30 @@
-package com.siscon.employee_service.adapters.api;
+package com.siscon.employee_service.delivery.api.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.siscon.employee_service.application.service.EmployeeService;
-import com.siscon.employee_service.shared.dto.DeleteEmployeeResponse;
-import com.siscon.employee_service.shared.dto.EmployeeRequest;
-import com.siscon.employee_service.shared.dto.EmployeeResponse;
-import com.siscon.employee_service.shared.dto.EmployeeUpdateRequest;
-import com.fasterxml.jackson.core.type.TypeReference;
+import com.siscon.employee_service.delivery.api.dto.DeleteEmployeeResponse;
+import com.siscon.employee_service.delivery.api.dto.EmployeeRequest;
+import com.siscon.employee_service.delivery.api.dto.EmployeeResponse;
+import com.siscon.employee_service.delivery.api.dto.EmployeeUpdateRequest;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 @RestController
 @Validated
 @RequestMapping("/api/employees")
-@Tag(name = "Employees")
+@Tag(name = "Employees", description = "Operaciones relacionadas con empleados")
 public class EmployeeController {
 
     private final EmployeeService service;
-
-    @Autowired
-    private ObjectMapper mapper;
+    private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
     public EmployeeController(EmployeeService service) {
         this.service = service;
@@ -52,12 +49,14 @@ public class EmployeeController {
 
     @PostMapping
     public List<EmployeeResponse> create(@RequestBody @Valid List<@Valid EmployeeRequest> request) {
+        logger.info("Creating employee");
         return service.saveEmployees(request);
     }
 
 
 
     @GetMapping("/{id}")
+    @Operation(summary = "Buscar empleado por ID", description = "Retorna un empleado dado su identificador")
     public ResponseEntity<EmployeeResponse> getById(@PathVariable Long id) {
         return ResponseEntity.ok(service.getEmployeeById(id));
     }
