@@ -6,9 +6,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class SwaggerConfig {
+public class OpenAPIConfig {
     @Bean
     public OpenAPI customOpenAPI() {
-        return new OpenAPI().info(new Info().title("Employee API").version("1.0"));
+        return new OpenAPI()
+                .info(new Info()
+                        .title("Employee Service API")
+                        .version("1.0")
+                        .description("API para gestión de empleados"));
     }
 }
