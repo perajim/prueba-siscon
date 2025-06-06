@@ -1,20 +1,31 @@
-# 📦 Prueba SISCON
+# API Employees
 
-**Prueba SISCON** es una aplicación desarrollada en Java utilizando Spring Boot, diseñada como parte de una prueba técnica o proyecto de evaluación. El objetivo principal es demostrar habilidades en el desarrollo de aplicaciones web utilizando el framework Spring Boot.
+Este proyecto es una **API RESTful** desarrollada en Java 17 con Spring Boot 3.x y Maven que permite gestionar empleados mediante operaciones CRUD. La solución sigue principios de POO, principios **S.O.L.I.D.** Y **arquitectura hexagonal**
 
-## 🚀 Características
+---
+
+## Características
 
 - Desarrollo con Spring Boot.
 - Gestión de dependencias mediante Maven.
 - Estructura de proyecto estándar para aplicaciones Java.
 
-## 🛠️ Tecnologías utilizadas
+---
+
+## Tecnologías utilizadas
 
 - Java 17
 - Spring Boot 3.x
 - Maven
+- H2 
+- Swagger/OpenAPI
+- JUnit 5 + Mockito
+- Lombok
+- YAML 
 
-## 📂 Estructura del proyecto
+---
+
+## Estructura del proyecto
 
 ```
 prueba-siscon/
@@ -29,12 +40,16 @@ prueba-siscon/
 ├── pom.xml               # Archivo de configuración de Maven
 ```
 
-## ⚙️ Requisitos previos
+---
+
+## Requisitos previos
 
 - Java 17 o superior instalado.
 - Maven instalado o utilizar el Maven Wrapper incluido.
 
-## 🚀 Instalación y ejecución
+---
+
+## Instalación y ejecución
 
 1. Clona el repositorio:
    ```bash
@@ -52,14 +67,49 @@ prueba-siscon/
    ./mvnw spring-boot:run
    ```
 
-## 📄 Licencia
+   ---
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-## 🤝 Contribuciones
+## 🧾 Modelo de Datos: `Empleado`
 
-Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, por favor abre una *issue* o envía un *pull request*.
+| Campo              | Tipo         | Descripción                      |
+|-------------------|--------------|----------------------------------|
+| primerNombre      | String       | Primer nombre del empleado       |
+| segundoNombre     | String       | Segundo nombre del empleado      |
+| apellidoPaterno   | String       | Apellido paterno                 |
+| apellidoMaterno   | String       | Apellido materno                 |
+| edad              | Integer      | Edad                             |
+| sexo              | String       | Sexo (M/F)                       |
+| fechaNacimiento   | String       | Formato `dd-MM-yyyy`             |
+| puesto            | String       | Puesto del empleado              |
 
-## 📫 Contacto
+---
 
-Para consultas o sugerencias, puedes contactarme a través de [tu correo electrónico o perfil de GitHub].
+## 🔗 Endpoints
+| Método	| Endpoint	          | Descripción                    |
+|-----------|---------------------|--------------------------------|
+| GET       | /api/empleados      | Lista todos los empleados      |
+| POST      | /api/empleados      | Inserta uno o varios empleados |
+| PUT       | /api/empleados/{id} | Actualiza un empleado por ID   |
+| DELETE    | /api/empleados/{id} | Elimina un empleado por ID     |
+
+---
+
+## Pruebas
+Ejecutar pruebas unitarias:
+   ```bash
+   ./mvnw test
+   ```
+
+---
+
+## Documentación Swagger
+Una vez iniciado el proyecto, accede a:
+
+[http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+
+---
+
+## Documentacion
+- Colección de **Postman** incluida (`postman_collection.json`)  
+- Documentación de contrato OpenAPI  
