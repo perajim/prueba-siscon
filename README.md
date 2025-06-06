@@ -72,26 +72,27 @@ prueba-siscon/
 
 ## 🧾 Modelo de Datos: `Empleado`
 
-| Campo              | Tipo         | Descripción                      |
+| Campo             | Tipo         | Descripción                      |
 |-------------------|--------------|----------------------------------|
-| primerNombre      | String       | Primer nombre del empleado       |
-| segundoNombre     | String       | Segundo nombre del empleado      |
-| apellidoPaterno   | String       | Apellido paterno                 |
-| apellidoMaterno   | String       | Apellido materno                 |
-| edad              | Integer      | Edad                             |
-| sexo              | String       | Sexo (M/F)                       |
-| fechaNacimiento   | String       | Formato `dd-MM-yyyy`             |
-| puesto            | String       | Puesto del empleado              |
+| firstName         | String       | Primer nombre del empleado       |
+| middleName        | String       | Apellido materno                 |
+| lastName          | String       | Apellido paterno                 |
+| age               | Integer      | Edad                             |
+| gender            | String       | Sexo (M/F)                       |
+| birthDate         | String       | Formato `dd-MM-yyyy`             |
+| position          | String       | Puesto del empleado              |
 
 ---
 
 ## 🔗 Endpoints
-| Método	| Endpoint	          | Descripción                    |
+| Método	   | Endpoint	          | Descripción                    |
 |-----------|---------------------|--------------------------------|
-| GET       | /api/empleados      | Lista todos los empleados      |
-| POST      | /api/empleados      | Inserta uno o varios empleados |
-| PUT       | /api/empleados/{id} | Actualiza un empleado por ID   |
-| DELETE    | /api/empleados/{id} | Elimina un empleado por ID     |
+| GET       | /api/employees      | Lista todos los empleados      |
+| GET       | /api/employee/{id}  | Lista todos los empleados      |
+| POST      | /api/employee       | Inserta un empleado |
+| POST      | /api/employees      | Inserta varios empleados |
+| PUT       | /api/employee/{id}  | Actualiza un empleado por ID   |
+| DELETE    | /api/employee/{id}  | Elimina un empleado por ID     |
 
 ---
 

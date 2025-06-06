@@ -67,7 +67,7 @@ public class EmployeeController {
         return response;
     }
 
-    @DeleteMapping("/employees/{id}")
+    @DeleteMapping("/employee/{id}")
     @Operation(summary = "Elimina un empleado por ID", description = "elimina empleado")
     public DeleteEmployeeResponse delete(@PathVariable Long id) {
         long start = System.currentTimeMillis();
@@ -81,7 +81,7 @@ public class EmployeeController {
         return response;
     }
 
-    @PutMapping("/employees/{id}")
+    @PutMapping("/employee/{id}")
     @Operation(summary = "Actualiza un empleado por ID", description = "Actualiza un solo empleado")
     public EmployeeResponse update(@PathVariable Long id, @Valid @RequestBody EmployeeUpdateRequest request) {
         long start = System.currentTimeMillis();
@@ -124,7 +124,7 @@ public class EmployeeController {
         return response;
     }
 
-    @GetMapping("/employees/{id}")
+    @GetMapping("/employee/{id}")
     @Operation(summary = "Buscar empleado por ID", description = "Retorna un empleado dado su identificador")
     public ResponseEntity<EmployeeResponse> getById(@PathVariable Long id) {
         long start = System.currentTimeMillis();
