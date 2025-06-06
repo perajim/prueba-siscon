@@ -59,7 +59,7 @@ class MapperTest {
 
         // Assert
         assertThat(response.getId()).isEqualTo(1L);
-        assertThat(response.getFullName()).isEqualTo("Ana López Martínez");
+        assertThat(response.getFirstName()).isEqualTo("Ana López Martínez");
         assertThat(response.getAge()).isEqualTo(28);
         assertThat(response.getGender()).isEqualTo("F");
         assertThat(response.getBirthDate()).isEqualTo(LocalDate.of(1996, 2, 14));

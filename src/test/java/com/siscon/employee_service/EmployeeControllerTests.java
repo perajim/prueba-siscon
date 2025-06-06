@@ -43,7 +43,9 @@ class EmployeeControllerTests {
     private EmployeeResponse mockEmployee() {
         return new EmployeeResponse(
                 1L,
-                "John Doe",
+                "John",
+                "",
+                "Doe",
                 30,
                 "Male",
                 LocalDate.of(1994, 1, 1),
@@ -88,7 +90,7 @@ class EmployeeControllerTests {
         EmployeeResponse result = employeeController.create(request);
 
         assertNotNull(result);
-        assertEquals("John Doe", result.getFullName());
+        assertEquals("John", result.getFirstName());
     }
 
     @Test
@@ -99,7 +101,7 @@ class EmployeeControllerTests {
         List<EmployeeResponse> result = employeeController.getAll();
 
         assertEquals(1, result.size());
-        assertEquals("John Doe", result.get(0).getFullName());
+        assertEquals("John", result.get(0).getFirstName());
     }
 
 
@@ -112,14 +114,14 @@ class EmployeeControllerTests {
         request.setPosition("Manager");
 
         EmployeeResponse updated = mockEmployee();
-        updated.setFullName("Jane Doe");
+        updated.setFirstName("Jane");
         updated.setPosition("Manager");
 
         when(updateEmployeeService.execute(employeeId, request)).thenReturn(updated);
 
         EmployeeResponse result = employeeController.update(employeeId, request);
 
-        assertEquals("Jane Doe", result.getFullName());
+        assertEquals("Jane", result.getFirstName());
         assertEquals("Manager", result.getPosition());
     }
 
@@ -151,6 +153,6 @@ class EmployeeControllerTests {
         ResponseEntity<EmployeeResponse> result = employeeController.getById(id);
 
         assertEquals(200, result.getStatusCodeValue());
-        assertEquals("John Doe", result.getBody().getFullName());
+        assertEquals("John", result.getBody().getFirstName());
     }
 }

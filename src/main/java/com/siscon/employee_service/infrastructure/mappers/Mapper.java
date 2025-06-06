@@ -12,20 +12,18 @@ public class Mapper {
     public static Employee toEntity(EmployeeRequest req) {
         return Employee.builder()
                 .firstName(req.getFirstName())
-                .middleName(req.getMiddleName())
+                .middleName(req.getMiddleName() != null ? req.getMiddleName() : "")
                 .lastName(req.getLastName())
-                .secondLastName(req.getSecondLastName())
-                .age(req.getAge())
-                .gender(req.getGender())
+                .secondLastName(req.getSecondLastName() != null ? req.getSecondLastName() : "" )
+                .age(req.getAge() != null ? req.getAge() : 0)
+                .gender(req.getGender() != null ? req.getGender() : "")
                 .birthDate(req.getBirthDate())
-                .position(req.getPosition())
+                .position(req.getPosition() != null ? req.getPosition() : "")
                 .build();
     }
 
     public static EmployeeResponse toResponse(Employee emp) {
-        String fullName = Stream.of(emp.getFirstName(), emp.getMiddleName(), emp.getLastName(), emp.getSecondLastName())
-                .filter(Objects::nonNull)
-                .collect(Collectors.joining(" "));
-        return new EmployeeResponse(emp.getId(), fullName, emp.getAge(), emp.getGender(), emp.getBirthDate(), emp.getPosition());
+        
+        return new EmployeeResponse(emp.getId(), emp.getFirstName(),emp.getMiddleName(), emp.getLastName(), emp.getAge(), emp.getGender(), emp.getBirthDate(), emp.getPosition());
     }
 }

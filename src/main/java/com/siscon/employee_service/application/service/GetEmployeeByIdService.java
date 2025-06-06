@@ -1,6 +1,5 @@
 package com.siscon.employee_service.application.service;
 
-import com.siscon.employee_service.delivery.api.dto.EmployeeRequest;
 import com.siscon.employee_service.delivery.api.dto.EmployeeResponse;
 import com.siscon.employee_service.domain.model.Employee;
 import com.siscon.employee_service.domain.model.exception.EmployeeNotFoundException;
