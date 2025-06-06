@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "8d76dcaf-0e20-4aa1-af74-fc64403af61a",
+		"name": "challenge-siscon-employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4493646",
+		"_collection_link": "https://perajim.postman.co/workspace/perajim~ffbe7a65-5169-4fe8-b5ab-088fcdfd25f9/collection/4493646-8d76dcaf-0e20-4aa1-af74-fc64403af61a?action=share&source=collection_link&creator=4493646"
+	},
+	"item": [
+		{
+			"name": "All Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Single Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Rafael\",\r\n    \"middleName\": \"Jimenez\",\r\n    \"lastName\": \"Jijon\",\r\n    \"age\": 30,\r\n    \"gender\": \"Masculino\",\r\n    \"birthDate\": \"29-05-1995\",\r\n     \"position\": \"Java Developer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"position\": \"java Engineer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create List Employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"firstName\": \"Rafael\",\r\n    \"middleName\": \"Jimenez\",\r\n    \"lastName\": \"Jijon\",\r\n    \"age\": 30,\r\n    \"gender\": \"Masculino\",\r\n    \"birthDate\": \"29-05-1995\",\r\n    \"position\": \"Java Developer\"\r\n  },\r\n  {\r\n    \"firstName\": \"Lucía\",\r\n    \"middleName\": \"Fernanda\",\r\n    \"lastName\": \"González\",\r\n    \"age\": 27,\r\n    \"gender\": \"Femenino\",\r\n    \"birthDate\": \"12-11-1997\",\r\n    \"position\": \"UX Designer\"\r\n  },\r\n  {\r\n    \"firstName\": \"Carlos\",\r\n    \"middleName\": \"Eduardo\",\r\n    \"lastName\": \"Pérez\",\r\n    \"age\": 35,\r\n    \"gender\": \"Masculino\",\r\n    \"birthDate\": \"05-08-1989\",\r\n    \"position\": \"DevOps Engineer\"\r\n  },\r\n  {\r\n    \"firstName\": \"Mariana\",\r\n    \"middleName\": \"Beatriz\",\r\n    \"lastName\": \"Hernández\",\r\n    \"age\": 32,\r\n    \"gender\": \"Femenino\",\r\n    \"birthDate\": \"21-04-1992\",\r\n    \"position\": \"Data Analyst\"\r\n  },\r\n  {\r\n    \"firstName\": \"Jorge\",\r\n    \"middleName\": \"Luis\",\r\n    \"lastName\": \"Ramírez\",\r\n    \"age\": 40,\r\n    \"gender\": \"Masculino\",\r\n    \"birthDate\": \"03-03-1984\",\r\n    \"position\": \"Project Manager\"\r\n  },\r\n  {\r\n    \"firstName\": \"Andrea\",\r\n    \"middleName\": \"Paola\",\r\n    \"lastName\": \"López\",\r\n    \"age\": 29,\r\n    \"gender\": \"Femenino\",\r\n    \"birthDate\": \"19-09-1995\",\r\n    \"position\": \"Scrum Master\"\r\n  },\r\n  {\r\n    \"firstName\": \"Diego\",\r\n    \"middleName\": \"Alonso\",\r\n    \"lastName\": \"Martínez\",\r\n    \"age\": 31,\r\n    \"gender\": \"Masculino\",\r\n    \"birthDate\": \"17-06-1993\",\r\n    \"position\": \"QA Engineer\"\r\n  },\r\n  {\r\n    \"firstName\": \"Isabel\",\r\n    \"middleName\": \"Teresa\",\r\n    \"lastName\": \"Vega\",\r\n    \"age\": 28,\r\n    \"gender\": \"Femenino\",\r\n    \"birthDate\": \"08-12-1996\",\r\n    \"position\": \"Frontend Developer\"\r\n  },\r\n  {\r\n    \"firstName\": \"Fernando\",\r\n    \"middleName\": \"Adrián\",\r\n    \"lastName\": \"Sánchez\",\r\n    \"age\": 36,\r\n    \"gender\": \"Masculino\",\r\n    \"birthDate\": \"14-02-1988\",\r\n    \"position\": \"Product Owner\"\r\n  },\r\n  {\r\n    \"firstName\": \"Camila\",\r\n    \"middleName\": \"Julieta\",\r\n    \"lastName\": \"Castillo\",\r\n    \"age\": 25,\r\n    \"gender\": \"Femenino\",\r\n    \"birthDate\": \"30-10-1999\",\r\n    \"position\": \"Software Tester\"\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

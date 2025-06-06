@@ -112,5 +112,5 @@ Una vez iniciado el proyecto, accede a:
 ---
 
 ## Documentacion
-- Colección de **Postman** incluida (`postman_collection.json`)  
-- Documentación de contrato OpenAPI  
+- Colección de **Postman** incluida (`challenge-siscon-employee.postman_collection.json`)  
+- Documentación de contrato OpenAPI (`api-docs.yaml`)
