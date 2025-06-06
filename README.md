@@ -70,7 +70,7 @@ prueba-siscon/
    ---
 
 
-## 🧾 Modelo de Datos: `Empleado`
+## Modelo de Datos: `Empleado`
 
 | Campo             | Tipo         | Descripción                      |
 |-------------------|--------------|----------------------------------|
@@ -84,7 +84,7 @@ prueba-siscon/
 
 ---
 
-## 🔗 Endpoints
+## Endpoints
 | Método	   | Endpoint	          | Descripción                    |
 |-----------|---------------------|--------------------------------|
 | GET       | /api/employees      | Lista todos los empleados      |
